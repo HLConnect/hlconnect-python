@@ -1,6 +1,6 @@
 # openapi_client.PurchaseApi
 
-All URIs are relative to *https://hlconnect-api-sandbox.mu.se*
+All URIs are relative to *https://hlconnect-api.mu.se*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,10 +27,10 @@ import openapi_client
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://hlconnect-api-sandbox.mu.se
+# Defining the host is optional and defaults to https://hlconnect-api.mu.se
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://hlconnect-api-sandbox.mu.se"
+    host = "https://hlconnect-api.mu.se"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -109,10 +109,10 @@ from openapi_client.models.download_url import DownloadUrl
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://hlconnect-api-sandbox.mu.se
+# Defining the host is optional and defaults to https://hlconnect-api.mu.se
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://hlconnect-api-sandbox.mu.se"
+    host = "https://hlconnect-api.mu.se"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -192,10 +192,10 @@ from openapi_client.models.order_item import OrderItem
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://hlconnect-api-sandbox.mu.se
+# Defining the host is optional and defaults to https://hlconnect-api.mu.se
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://hlconnect-api-sandbox.mu.se"
+    host = "https://hlconnect-api.mu.se"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -275,10 +275,10 @@ from openapi_client.models.purchase_register_request import PurchaseRegisterRequ
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://hlconnect-api-sandbox.mu.se
+# Defining the host is optional and defaults to https://hlconnect-api.mu.se
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://hlconnect-api-sandbox.mu.se"
+    host = "https://hlconnect-api.mu.se"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -356,10 +356,10 @@ from openapi_client.models.view_url import ViewUrl
 from openapi_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://hlconnect-api-sandbox.mu.se
+# Defining the host is optional and defaults to https://hlconnect-api.mu.se
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
-    host = "https://hlconnect-api-sandbox.mu.se"
+    host = "https://hlconnect-api.mu.se"
 )
 
 # The client must configure the authentication and authorization parameters

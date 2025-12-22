@@ -194,7 +194,7 @@ class Configuration:
     ) -> None:
         """Constructor
         """
-        self._base_path = "https://hlconnect-api-sandbox.mu.se" if host is None else host
+        self._base_path = "https://hlconnect-api.mu.se" if host is None else host
         """Default Base url
         """
         self.server_index = 0 if server_index is None and host is None else server_index
@@ -525,8 +525,12 @@ class Configuration:
         """
         return [
             {
-                'url': "https://hlconnect-api-sandbox.mu.se",
-                'description': "No description provided",
+                'url': "https://hlconnect-api.mu.se",
+                'description': "LIVE Environment server",
+            },
+            {
+                'url': "http://hlconnect-api-sandbox.mu.se",
+                'description': "SANDBOX Environment server",
             }
         ]
 
