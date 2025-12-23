@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.purchase_in_processing_response import PurchaseInProcessingResponse
+from hlconnect_client.models.purchase_in_processing_response import PurchaseInProcessingResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.purchase_register_request import PurchaseRegisterRequest
+from hlconnect_client.models.purchase_register_request import PurchaseRegisterRequest
 
 # TODO update the JSON string below
 json = "{}"

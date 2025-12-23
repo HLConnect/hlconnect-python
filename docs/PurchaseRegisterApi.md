@@ -1,4 +1,4 @@
-# openapi_client.PurchaseRegisterApi
+# hlconnect_client.PurchaseRegisterApi
 
 All URIs are relative to *https://hlconnect-api.mu.se*
 
@@ -19,14 +19,14 @@ Initiates the purchase process for a digital asset. Validates request parameters
 * Bearer Authentication (access_token):
 
 ```python
-import openapi_client
-from openapi_client.models.purchase_register_request import PurchaseRegisterRequest
-from openapi_client.rest import ApiException
+import hlconnect_client
+from hlconnect_client.models.purchase_register_request import PurchaseRegisterRequest
+from hlconnect_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://hlconnect-api.mu.se
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = hlconnect_client.Configuration(
     host = "https://hlconnect-api.mu.se"
 )
 
@@ -36,15 +36,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = openapi_client.Configuration(
+configuration = hlconnect_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with hlconnect_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PurchaseRegisterApi(api_client)
-    purchase_register_request = openapi_client.PurchaseRegisterRequest() # PurchaseRegisterRequest | Purchase registration request with asset and order details
+    api_instance = hlconnect_client.PurchaseRegisterApi(api_client)
+    purchase_register_request = hlconnect_client.PurchaseRegisterRequest() # PurchaseRegisterRequest | Purchase registration request with asset and order details
 
     try:
         # Register a new purchase transaction

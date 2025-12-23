@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.price_item import PriceItem
+from hlconnect_client.models.price_item import PriceItem
 
 # TODO update the JSON string below
 json = "{}"

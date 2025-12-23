@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.download_url import DownloadUrl
+from hlconnect_client.models.download_url import DownloadUrl
 
 # TODO update the JSON string below
 json = "{}"

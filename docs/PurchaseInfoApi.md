@@ -1,4 +1,4 @@
-# openapi_client.PurchaseInfoApi
+# hlconnect_client.PurchaseInfoApi
 
 All URIs are relative to *https://hlconnect-api.mu.se*
 
@@ -19,14 +19,14 @@ Returns detailed information about a purchase order including status, asset deta
 * Bearer Authentication (access_token):
 
 ```python
-import openapi_client
-from openapi_client.models.order_item import OrderItem
-from openapi_client.rest import ApiException
+import hlconnect_client
+from hlconnect_client.models.order_item import OrderItem
+from hlconnect_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://hlconnect-api.mu.se
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = hlconnect_client.Configuration(
     host = "https://hlconnect-api.mu.se"
 )
 
@@ -36,14 +36,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = openapi_client.Configuration(
+configuration = hlconnect_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with hlconnect_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PurchaseInfoApi(api_client)
+    api_instance = hlconnect_client.PurchaseInfoApi(api_client)
     order_id = 12345 # int | Vendor order ID to retrieve purchase details for. This is the unique identifier assigned by the vendor when placing the order.
 
     try:

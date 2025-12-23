@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.order_processing_failed_response import OrderProcessingFailedResponse
+from hlconnect_client.models.order_processing_failed_response import OrderProcessingFailedResponse
 
 # TODO update the JSON string below
 json = "{}"

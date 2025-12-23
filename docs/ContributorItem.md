@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.contributor_item import ContributorItem
+from hlconnect_client.models.contributor_item import ContributorItem
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,13 +1,13 @@
 [project]
-name = "openapi_client"
-version = "1.0.0"
-description = "HL Connector"
+name = "hlconnect_client"
+version = "0.0.2"
+description = "HL Connect"
 authors = [
   {name = "OpenAPI Generator Community",email = "team@openapitools.org"},
 ]
 license = { text = "Proprietary" }
 readme = "README.md"
-keywords = ["OpenAPI", "OpenAPI-Generator", "HL Connector"]
+keywords = ["OpenAPI", "OpenAPI-Generator", "HL Connect"]
 requires-python = ">=3.9"
 
 dependencies = [
@@ -41,7 +41,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "openapi_client",
+  "hlconnect_client",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]
@@ -79,7 +79,7 @@ disallow_any_generics = true
 
 [[tool.mypy.overrides]]
 module = [
-  "openapi_client.configuration",
+  "hlconnect_client.configuration",
 ]
 warn_unused_ignores = true
 strict_equality = true

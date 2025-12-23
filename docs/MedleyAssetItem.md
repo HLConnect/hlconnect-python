@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.medley_asset_item import MedleyAssetItem
+from hlconnect_client.models.medley_asset_item import MedleyAssetItem
 
 # TODO update the JSON string below
 json = "{}"

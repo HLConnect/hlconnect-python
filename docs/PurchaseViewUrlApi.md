@@ -1,4 +1,4 @@
-# openapi_client.PurchaseViewUrlApi
+# hlconnect_client.PurchaseViewUrlApi
 
 All URIs are relative to *https://hlconnect-api.mu.se*
 
@@ -19,14 +19,14 @@ Generates and returns a secure, time-limited view URL for a purchased digital as
 * Bearer Authentication (access_token):
 
 ```python
-import openapi_client
-from openapi_client.models.view_url import ViewUrl
-from openapi_client.rest import ApiException
+import hlconnect_client
+from hlconnect_client.models.view_url import ViewUrl
+from hlconnect_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://hlconnect-api.mu.se
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = hlconnect_client.Configuration(
     host = "https://hlconnect-api.mu.se"
 )
 
@@ -36,14 +36,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = openapi_client.Configuration(
+configuration = hlconnect_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with hlconnect_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PurchaseViewUrlApi(api_client)
+    api_instance = hlconnect_client.PurchaseViewUrlApi(api_client)
     order_id = 12345 # int | Vendor order ID that contains the asset to view
     order_line_id = 1 # int | Specific line item within the order that identifies the asset to view
 

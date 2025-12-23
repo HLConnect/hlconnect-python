@@ -1,4 +1,4 @@
-# openapi_client.AssetsApi
+# hlconnect_client.AssetsApi
 
 All URIs are relative to *https://hlconnect-api.mu.se*
 
@@ -19,14 +19,14 @@ Returns a list of digital assets with their complete metadata. Assets include in
 * Bearer Authentication (access_token):
 
 ```python
-import openapi_client
-from openapi_client.models.assets_list_response import AssetsListResponse
-from openapi_client.rest import ApiException
+import hlconnect_client
+from hlconnect_client.models.assets_list_response import AssetsListResponse
+from hlconnect_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://hlconnect-api.mu.se
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = hlconnect_client.Configuration(
     host = "https://hlconnect-api.mu.se"
 )
 
@@ -36,14 +36,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = openapi_client.Configuration(
+configuration = hlconnect_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with hlconnect_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AssetsApi(api_client)
+    api_instance = hlconnect_client.AssetsApi(api_client)
     page_size = 20 # int | Number of assets to return per page (optional) (default to 20)
     last_id = 56 # int | The ID of the last asset from the previous page. Used for pagination to retrieve the next page of results. (optional)
 

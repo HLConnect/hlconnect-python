@@ -1,4 +1,4 @@
-# openapi_client.HealthApi
+# hlconnect_client.HealthApi
 
 All URIs are relative to *https://hlconnect-api.mu.se*
 
@@ -18,22 +18,22 @@ Checks the status of critical system components such as database connections and
 
 
 ```python
-import openapi_client
-from openapi_client.models.health_item import HealthItem
-from openapi_client.rest import ApiException
+import hlconnect_client
+from hlconnect_client.models.health_item import HealthItem
+from hlconnect_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://hlconnect-api.mu.se
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = hlconnect_client.Configuration(
     host = "https://hlconnect-api.mu.se"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with hlconnect_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.HealthApi(api_client)
+    api_instance = hlconnect_client.HealthApi(api_client)
 
     try:
         # Perform system health check

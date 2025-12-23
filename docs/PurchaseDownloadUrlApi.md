@@ -1,4 +1,4 @@
-# openapi_client.PurchaseDownloadUrlApi
+# hlconnect_client.PurchaseDownloadUrlApi
 
 All URIs are relative to *https://hlconnect-api.mu.se*
 
@@ -19,14 +19,14 @@ Generates and returns a secure download URL for a purchased digital asset. The U
 * Bearer Authentication (access_token):
 
 ```python
-import openapi_client
-from openapi_client.models.download_url import DownloadUrl
-from openapi_client.rest import ApiException
+import hlconnect_client
+from hlconnect_client.models.download_url import DownloadUrl
+from hlconnect_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://hlconnect-api.mu.se
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = hlconnect_client.Configuration(
     host = "https://hlconnect-api.mu.se"
 )
 
@@ -36,14 +36,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: access_token
-configuration = openapi_client.Configuration(
+configuration = hlconnect_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with hlconnect_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PurchaseDownloadUrlApi(api_client)
+    api_instance = hlconnect_client.PurchaseDownloadUrlApi(api_client)
     order_id = 12345 # int | Vendor order ID that contains the asset to download
     order_line_id = 1 # int | Specific line item within the order that identifies the asset to download
 

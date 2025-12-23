@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.usergen_item import UsergenItem
+from hlconnect_client.models.usergen_item import UsergenItem
 
 # TODO update the JSON string below
 json = "{}"
