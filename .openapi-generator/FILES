@@ -26,10 +26,13 @@ docs/PurchaseInProcessingResponse.md
 docs/PurchaseInfoApi.md
 docs/PurchaseRegisterApi.md
 docs/PurchaseRegisterRequest.md
+docs/PurchaseValidateBeforePaymentRequest.md
+docs/PurchaseValidationApi.md
 docs/PurchaseViewUrlApi.md
 docs/RelatedGoodItem.md
 docs/RenderingItem.md
 docs/UsergenItem.md
+docs/ValidationToken.md
 docs/ViewUrl.md
 git_push.sh
 hlconnect_client/__init__.py
@@ -41,6 +44,7 @@ hlconnect_client/api/purchase_cancel_api.py
 hlconnect_client/api/purchase_download_url_api.py
 hlconnect_client/api/purchase_info_api.py
 hlconnect_client/api/purchase_register_api.py
+hlconnect_client/api/purchase_validation_api.py
 hlconnect_client/api/purchase_view_url_api.py
 hlconnect_client/api_client.py
 hlconnect_client/api_response.py
@@ -63,9 +67,11 @@ hlconnect_client/models/package_item.py
 hlconnect_client/models/price_item.py
 hlconnect_client/models/purchase_in_processing_response.py
 hlconnect_client/models/purchase_register_request.py
+hlconnect_client/models/purchase_validate_before_payment_request.py
 hlconnect_client/models/related_good_item.py
 hlconnect_client/models/rendering_item.py
 hlconnect_client/models/usergen_item.py
+hlconnect_client/models/validation_token.py
 hlconnect_client/models/view_url.py
 hlconnect_client/py.typed
 hlconnect_client/rest.py

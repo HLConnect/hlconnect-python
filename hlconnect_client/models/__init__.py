@@ -29,8 +29,10 @@ from hlconnect_client.models.package_item import PackageItem
 from hlconnect_client.models.price_item import PriceItem
 from hlconnect_client.models.purchase_in_processing_response import PurchaseInProcessingResponse
 from hlconnect_client.models.purchase_register_request import PurchaseRegisterRequest
+from hlconnect_client.models.purchase_validate_before_payment_request import PurchaseValidateBeforePaymentRequest
 from hlconnect_client.models.related_good_item import RelatedGoodItem
 from hlconnect_client.models.rendering_item import RenderingItem
 from hlconnect_client.models.usergen_item import UsergenItem
+from hlconnect_client.models.validation_token import ValidationToken
 from hlconnect_client.models.view_url import ViewUrl
 

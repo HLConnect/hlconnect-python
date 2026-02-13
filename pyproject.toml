@@ -1,6 +1,6 @@
 [project]
 name = "hlconnect_client"
-version = "0.0.2"
+version = "0.1.0"
 description = "HL Connect"
 authors = [
   {name = "OpenAPI Generator Community",email = "team@openapitools.org"},

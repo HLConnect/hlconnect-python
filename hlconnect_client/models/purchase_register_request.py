@@ -17,9 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from typing_extensions import Annotated
 from hlconnect_client.models.asset_part_form import AssetPartForm
 from typing import Optional, Set
 from typing_extensions import Self
@@ -28,23 +27,14 @@ class PurchaseRegisterRequest(BaseModel):
     """
     Request payload for registering a new purchase transaction. Contains all required information to initiate the purchase of a digital asset.
     """ # noqa: E501
-    asset_id: StrictInt = Field(description="Unique identifier for the digital asset to be purchased. This is Hal Leonard's internal asset ID.")
+    token: StrictStr = Field(description="Validation token")
     order_number: StrictInt = Field(description="Vendor-generated order number that uniquely identifies this purchase order.")
     order_line_id: StrictInt = Field(description="Line number within the order that identifies this specific item. Used to distinguish multiple items in the same order.")
-    country_code: Annotated[str, Field(strict=True)] = Field(description="ISO 3166-1 alpha-2 country code identifying the country of sale for the customer.")
     line_item_price: Union[StrictFloat, StrictInt] = Field(description="Price for this specific line item as a real number. Represents the total price for the quantity specified.")
     unit_price: Union[StrictFloat, StrictInt] = Field(description="Unit price for a single item as a real number")
-    quantity: StrictInt = Field(description="Quantity of items being purchased in this line item.")
     customer: StrictStr = Field(description="Customer name for asset personalization. May be printed on the asset if personalization is supported.")
     parts: Optional[List[AssetPartForm]] = Field(default=None, description="Optional parts specification for ensemble assets. Allows customers to select specific parts of an ensemble for individual purchase rather than buying the complete set.")
-    __properties: ClassVar[List[str]] = ["asset_id", "order_number", "order_line_id", "country_code", "line_item_price", "unit_price", "quantity", "customer", "parts"]
-
-    @field_validator('country_code')
-    def country_code_validate_regular_expression(cls, value):
-        """Validates the regular expression"""
-        if not re.match(r"^[A-Z]{2}$", value):
-            raise ValueError(r"must validate the regular expression /^[A-Z]{2}$/")
-        return value
+    __properties: ClassVar[List[str]] = ["token", "order_number", "order_line_id", "line_item_price", "unit_price", "customer", "parts"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -109,13 +99,11 @@ class PurchaseRegisterRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "asset_id": obj.get("asset_id"),
+            "token": obj.get("token"),
             "order_number": obj.get("order_number"),
             "order_line_id": obj.get("order_line_id"),
-            "country_code": obj.get("country_code"),
             "line_item_price": obj.get("line_item_price"),
             "unit_price": obj.get("unit_price"),
-            "quantity": obj.get("quantity"),
             "customer": obj.get("customer"),
             "parts": [AssetPartForm.from_dict(_item) for _item in obj["parts"]] if obj.get("parts") is not None else None
         })

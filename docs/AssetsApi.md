@@ -85,6 +85,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Successfully retrieved list of assets with pagination information |  * X-Environment -  <br>  |
 **401** | Unauthorized - Missing or invalid access token |  -  |
+**403** | Forbidden - Vendor access check failed |  -  |
 **500** | Internal server error - Something went wrong processing the request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

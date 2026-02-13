@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "0.0.2"
+__version__ = "0.1.0"
 
 # Define package exports
 __all__ = [
@@ -25,6 +25,7 @@ __all__ = [
     "PurchaseDownloadUrlApi",
     "PurchaseInfoApi",
     "PurchaseRegisterApi",
+    "PurchaseValidationApi",
     "PurchaseViewUrlApi",
     "ApiResponse",
     "ApiClient",
@@ -51,9 +52,11 @@ __all__ = [
     "PriceItem",
     "PurchaseInProcessingResponse",
     "PurchaseRegisterRequest",
+    "PurchaseValidateBeforePaymentRequest",
     "RelatedGoodItem",
     "RenderingItem",
     "UsergenItem",
+    "ValidationToken",
     "ViewUrl",
 ]
 
@@ -65,6 +68,7 @@ from hlconnect_client.api.purchase_cancel_api import PurchaseCancelApi as Purcha
 from hlconnect_client.api.purchase_download_url_api import PurchaseDownloadUrlApi as PurchaseDownloadUrlApi
 from hlconnect_client.api.purchase_info_api import PurchaseInfoApi as PurchaseInfoApi
 from hlconnect_client.api.purchase_register_api import PurchaseRegisterApi as PurchaseRegisterApi
+from hlconnect_client.api.purchase_validation_api import PurchaseValidationApi as PurchaseValidationApi
 from hlconnect_client.api.purchase_view_url_api import PurchaseViewUrlApi as PurchaseViewUrlApi
 
 # import ApiClient
@@ -95,8 +99,10 @@ from hlconnect_client.models.package_item import PackageItem as PackageItem
 from hlconnect_client.models.price_item import PriceItem as PriceItem
 from hlconnect_client.models.purchase_in_processing_response import PurchaseInProcessingResponse as PurchaseInProcessingResponse
 from hlconnect_client.models.purchase_register_request import PurchaseRegisterRequest as PurchaseRegisterRequest
+from hlconnect_client.models.purchase_validate_before_payment_request import PurchaseValidateBeforePaymentRequest as PurchaseValidateBeforePaymentRequest
 from hlconnect_client.models.related_good_item import RelatedGoodItem as RelatedGoodItem
 from hlconnect_client.models.rendering_item import RenderingItem as RenderingItem
 from hlconnect_client.models.usergen_item import UsergenItem as UsergenItem
+from hlconnect_client.models.validation_token import ValidationToken as ValidationToken
 from hlconnect_client.models.view_url import ViewUrl as ViewUrl
 
